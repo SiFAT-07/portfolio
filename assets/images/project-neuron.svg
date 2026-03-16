@@ -1,0 +1,14 @@
+<svg width="640" height="380" viewBox="0 0 640 380" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="b" x1="0" y1="0" x2="640" y2="380" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#100615"/>
+      <stop offset="1" stop-color="#431054"/>
+    </linearGradient>
+  </defs>
+  <rect width="640" height="380" rx="22" fill="url(#b)"/>
+  <rect x="170" y="90" width="300" height="200" rx="20" stroke="#E18AFF" stroke-width="6"/>
+  <rect x="260" y="150" width="120" height="80" rx="10" stroke="#F0C3FF" stroke-width="5"/>
+  <path d="M170 128H120M170 168H95M170 208H120M170 248H105" stroke="#C956FF" stroke-width="6" stroke-linecap="round"/>
+  <path d="M470 128H520M470 168H545M470 208H520M470 248H535" stroke="#C956FF" stroke-width="6" stroke-linecap="round"/>
+  <text x="34" y="62" font-family="Arial, sans-serif" font-size="34" fill="#F7E9FF">NEURON EDGE BOARD</text>
+</svg>

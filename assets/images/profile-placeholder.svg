@@ -1,0 +1,17 @@
+<svg width="540" height="540" viewBox="0 0 540 540" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="540" y2="540" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#15081F"/>
+      <stop offset="1" stop-color="#451062"/>
+    </linearGradient>
+    <linearGradient id="ring" x1="100" y1="90" x2="430" y2="430" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#D85FFF"/>
+      <stop offset="1" stop-color="#8B27CC"/>
+    </linearGradient>
+  </defs>
+  <rect width="540" height="540" rx="36" fill="url(#bg)"/>
+  <circle cx="270" cy="210" r="88" stroke="url(#ring)" stroke-width="14"/>
+  <path d="M145 410C165 338 224 300 270 300C316 300 375 338 395 410" stroke="url(#ring)" stroke-width="14" stroke-linecap="round"/>
+  <rect x="110" y="82" width="320" height="376" rx="160" stroke="rgba(255,255,255,0.2)"/>
+  <text x="270" y="500" text-anchor="middle" font-family="Arial, sans-serif" font-size="26" fill="#EED2FF">PROFILE</text>
+</svg>

@@ -1,0 +1,13 @@
+<svg width="640" height="380" viewBox="0 0 640 380" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="a" x1="0" y1="0" x2="640" y2="380" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#120719"/>
+      <stop offset="1" stop-color="#5A157A"/>
+    </linearGradient>
+  </defs>
+  <rect width="640" height="380" rx="22" fill="url(#a)"/>
+  <path d="M80 280L180 180L250 220L360 120L460 210L560 110" stroke="#DD79FF" stroke-width="6" stroke-linecap="round"/>
+  <circle cx="180" cy="180" r="8" fill="#F4C2FF"/>
+  <circle cx="360" cy="120" r="8" fill="#F4C2FF"/>
+  <text x="40" y="70" font-family="Arial, sans-serif" font-size="36" fill="#F7E9FF">AURORA CLOUD</text>
+</svg>

@@ -1,0 +1,12 @@
+<svg width="420" height="260" viewBox="0 0 420 260" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="h3" x1="0" y1="0" x2="420" y2="260" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#110718"/>
+      <stop offset="1" stop-color="#4A1261"/>
+    </linearGradient>
+  </defs>
+  <rect width="420" height="260" rx="16" fill="url(#h3)"/>
+  <path d="M78 174L130 122L172 152L222 100L282 140L340 110" stroke="#E08CFF" stroke-width="6" stroke-linecap="round"/>
+  <circle cx="222" cy="100" r="8" fill="#F4C9FF"/>
+  <text x="24" y="42" font-family="Arial, sans-serif" font-size="23" fill="#F5DBFF">DIAGNOSTIC SPEEDUP</text>
+</svg>

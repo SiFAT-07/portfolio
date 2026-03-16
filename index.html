@@ -1,0 +1,315 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Portfolio of a Software and Hardware Engineer building future-ready systems." />
+  <title>Maknun Ahmed Sifat | Software & Hardware Engineer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <canvas id="particle-canvas" aria-hidden="true"></canvas>
+  <div class="cursor-glow" aria-hidden="true"></div>
+
+  <header class="site-header" id="top">
+    <a href="#hero" class="logo">AQ</a>
+    <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <nav class="site-nav" aria-label="Primary navigation">
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#achievements">Achievements</a>
+      <a href="#projects">Projects</a>
+      <a href="#timeline">Experience</a>
+      <a href="#github">GitHub</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="hero" class="hero section reveal">
+      <div class="hero-content">
+        <p class="eyebrow">Future Systems Architect</p>
+        <h1>Maknun Ahmed Sifat</h1>
+        <h2>Software & Hardware Engineer</h2>
+        <p class="tagline">
+          I design intelligent products where robust software meets precision hardware,
+          from cloud-native platforms to embedded AI systems.
+        </p>
+        <div class="hero-actions">
+          <a href="#projects" class="btn btn-primary">View Projects</a>
+          <a href="#contact" class="btn btn-secondary">Contact Me</a>
+          <a href="assets/Alex-Quantum-CV.pdf" class="btn btn-ghost" download>Download CV</a>
+        </div>
+      </div>
+      <div class="hero-visual glass-panel">
+        <img src="resources/profile.jpg" alt="Profile placeholder" />
+        <div class="status-chip">Open to Research & Engineering Roles</div>
+      </div>
+    </section>
+
+    <section id="about" class="section reveal">
+      <div class="section-heading">
+        <p class="eyebrow">About Me</p>
+        <h3>Engineering Beyond Boundaries</h3>
+      </div>
+      <div class="about-grid">
+        <p>
+          I build systems that bridge software intelligence and hardware reliability.
+          My work spans scalable backend architecture, machine learning integration,
+          embedded firmware, and IoT ecosystems optimized for real-world performance.
+        </p>
+        <p>
+          From designing AI-assisted control logic to debugging electronics at signal level,
+          I focus on innovation, systems thinking, and measurable impact across the full stack
+          of modern technology.
+        </p>
+      </div>
+    </section>
+
+    <section id="skills" class="section reveal">
+      <div class="section-heading">
+        <p class="eyebrow">Skills</p>
+        <h3>Dual-Domain Mastery</h3>
+      </div>
+      <div class="skills-layout">
+        <article class="glass-panel skill-group">
+          <h4>Software Skills</h4>
+          <div class="skill-item">
+            <div class="skill-meta"><span>Programming Languages</span><span>92%</span></div>
+            <div class="skill-track"><span class="skill-fill" data-width="92"></span></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-meta"><span>Web Development</span><span>90%</span></div>
+            <div class="skill-track"><span class="skill-fill" data-width="90"></span></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-meta"><span>Data Science / AI</span><span>87%</span></div>
+            <div class="skill-track"><span class="skill-fill" data-width="87"></span></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-meta"><span>Frameworks & Tools</span><span>89%</span></div>
+            <div class="skill-track"><span class="skill-fill" data-width="89"></span></div>
+          </div>
+        </article>
+
+        <article class="glass-panel skill-group">
+          <h4>Hardware Skills</h4>
+          <div class="skill-item">
+            <div class="skill-meta"><span>Embedded Systems</span><span>94%</span></div>
+            <div class="skill-track"><span class="skill-fill" data-width="94"></span></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-meta"><span>Microcontrollers</span><span>91%</span></div>
+            <div class="skill-track"><span class="skill-fill" data-width="91"></span></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-meta"><span>IoT Development</span><span>88%</span></div>
+            <div class="skill-track"><span class="skill-fill" data-width="88"></span></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-meta"><span>Electronics Troubleshooting</span><span>93%</span></div>
+            <div class="skill-track"><span class="skill-fill" data-width="93"></span></div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="achievements" class="section reveal">
+      <div class="section-heading">
+        <p class="eyebrow">Achievements</p>
+        <h3>Software and Hardware Impact</h3>
+      </div>
+      <div class="achievement-columns">
+        <article class="glass-panel achievement-group">
+          <h4>Software Achievements</h4>
+          <div class="achievement-card-grid">
+            <article class="achievement-card">
+              <img src="resources/advyon.jpg" alt="Distributed analytics achievement" />
+              <div class="achievement-body">
+                <h5>Scalable Analytics Platform</h5>
+                <p>Architected a distributed analytics system processing 40M+ events per day.</p>
+              </div>
+            </article>
+            <article class="achievement-card">
+              <img src="resources/resq.jpg" alt="AI quality pipeline achievement" />
+              <div class="achievement-body">
+                <h5>AI Quality Inspection</h5>
+                <p>Built a computer vision pipeline with 96% defect detection accuracy.</p>
+              </div>
+            </article>
+            <article class="achievement-card">
+              <img src="resources/dbms.jpg" alt="Engineering excellence award achievement" />
+              <div class="achievement-body">
+                <h5>Engineering Recognition</h5>
+                <p>Received recognition for high-impact automation and delivery excellence.</p>
+              </div>
+            </article>
+          </div>
+        </article>
+        <article class="glass-panel achievement-group">
+          <h4>Hardware Achievements</h4>
+          <div class="achievement-card-grid">
+            <article class="achievement-card">
+              <img src="resources/resq.jpg" alt="Low-power IoT node achievement" />
+              <div class="achievement-body">
+                <h5>Low-Power IoT Nodes</h5>
+                <p>Designed optimized IoT nodes that improved battery life by 35%.</p>
+              </div>
+            </article>
+            <article class="achievement-card">
+              <img src="resources/Electronics.jpg" alt="Embedded robotics firmware achievement" />
+              <div class="achievement-body">
+                <h5>Robotics Firmware</h5>
+                <p>Developed real-time embedded control firmware for robotics prototypes.</p>
+              </div>
+            </article>
+            <article class="achievement-card">
+              <img src="resources/soccer.jpeg" alt="Hardware diagnostics optimization achievement" />
+              <div class="achievement-body">
+                <h5>Rapid Diagnostics System</h5>
+                <p>Reduced hardware troubleshooting turnaround time by 50% through process redesign.</p>
+              </div>
+            </article>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="projects" class="section reveal">
+      <div class="section-heading">
+        <p class="eyebrow">Projects</p>
+        <h3>Flagship Work</h3>
+      </div>
+
+      <div class="project-filters" role="group" aria-label="Project filters">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="software">Software</button>
+        <button class="filter-btn" data-filter="hardware">Hardware</button>
+        <button class="filter-btn" data-filter="hybrid">Hybrid</button>
+      </div>
+
+      <div class="project-grid">
+        <article class="glass-panel project-card" data-category="software">
+          <img src="assets/images/project-aurora.svg" alt="Aurora Cloud project preview" />
+          <div class="project-content">
+            <h4>Aurora Cloud Orchestrator</h4>
+            <p>Cloud-native orchestration for autonomous workloads with resilient service routing.</p>
+            <p class="tech">Go, Node.js, Docker, Kubernetes</p>
+            <div class="project-links">
+              <a href="https://github.com/SiFAT-07" target="_blank" rel="noopener noreferrer">GitHub</a>
+              <a href="#" aria-disabled="true">Live Demo</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="glass-panel project-card" data-category="hardware">
+          <img src="assets/images/project-neuron.svg" alt="Neuron Board project preview" />
+          <div class="project-content">
+            <h4>Neuron Edge Board</h4>
+            <p>Modular embedded platform for low-latency sensor fusion and AI inferencing.</p>
+            <p class="tech">C/C++, STM32, FreeRTOS, PCB Design</p>
+            <div class="project-links">
+              <a href="https://github.com/SiFAT-07" target="_blank" rel="noopener noreferrer">GitHub</a>
+              <a href="#" aria-disabled="true">Live Demo</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="glass-panel project-card" data-category="hybrid">
+          <img src="assets/images/project-nexus.svg" alt="Nexus Grid project preview" />
+          <div class="project-content">
+            <h4>Nexus Grid</h4>
+            <p>End-to-end IoT intelligence stack combining firmware telemetry and predictive analytics.</p>
+            <p class="tech">Python, TensorFlow Lite, MQTT, ESP32</p>
+            <div class="project-links">
+              <a href="https://github.com/SiFAT-07" target="_blank" rel="noopener noreferrer">GitHub</a>
+              <a href="#" aria-disabled="true">Live Demo</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="timeline" class="section reveal">
+      <div class="section-heading">
+        <p class="eyebrow">Experience & Education</p>
+        <h3>Journey Timeline</h3>
+      </div>
+      <div class="timeline">
+        <article class="timeline-item glass-panel">
+          <span class="timeline-year">2024 - Present</span>
+          <h4>Senior Systems Engineer</h4>
+          <p>Leading cross-functional software-hardware integration for intelligent devices.</p>
+        </article>
+        <article class="timeline-item glass-panel">
+          <span class="timeline-year">2022 - 2024</span>
+          <h4>Embedded AI Research Engineer</h4>
+          <p>Developed optimized inference pipelines for edge devices in research prototypes.</p>
+        </article>
+        <article class="timeline-item glass-panel">
+          <span class="timeline-year">2018 - 2022</span>
+          <h4>B.Sc. in Electrical and Computer Engineering</h4>
+          <p>Focused on embedded design, machine intelligence, and robust systems architecture.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="github" class="section reveal">
+      <div class="section-heading">
+        <p class="eyebrow">GitHub</p>
+        <h3>Open Source Presence</h3>
+      </div>
+      <div class="glass-panel github-box">
+        <p>Explore repositories, code contributions, and ongoing engineering experiments.</p>
+        <a href="https://github.com/SiFAT-07" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Visit GitHub Profile</a>
+      </div>
+    </section>
+
+    <section id="contact" class="section reveal">
+      <div class="section-heading">
+        <p class="eyebrow">Contact</p>
+        <h3>Let&apos;s Build The Future</h3>
+      </div>
+      <div class="contact-layout">
+        <div class="glass-panel contact-info">
+          <p><strong>Email:</strong> alex.quantum@engineering.dev</p>
+          <p><strong>LinkedIn:</strong> linkedin.com/in/alex-quantum</p>
+          <p><strong>GitHub:</strong> github.com/SiFAT-07</p>
+        </div>
+        <form class="glass-panel contact-form" id="contact-form">
+          <label for="name">Name</label>
+          <input id="name" name="name" type="text" required />
+
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" required />
+
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" required></textarea>
+
+          <button type="submit" class="btn btn-secondary">Send Message</button>
+          <p class="form-status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; <span id="year"></span> Alex Quantum. Crafted for next-generation engineering.</p>
+    <div class="footer-links">
+      <a href="https://github.com/SiFAT-07" target="_blank" rel="noopener noreferrer">GitHub</a>
+      <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      <a href="#top">Back to top</a>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
