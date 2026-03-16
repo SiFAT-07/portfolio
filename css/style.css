@@ -305,22 +305,23 @@ main {
   margin-bottom: 0.35rem;
 }
 
-.skill-track {
-  width: 100%;
-  height: 8px;
-  border-radius: 999px;
-  background: rgba(255, 255, 255, 0.08);
-  overflow: hidden;
+.skill-level-bars {
+  display: flex;
+  gap: 0.4rem;
+  height: 6px;
 }
 
-.skill-fill {
-  display: block;
-  width: 0;
+.bar {
+  flex: 1;
   height: 100%;
-  border-radius: inherit;
+  border-radius: 3px;
+  background: rgba(255, 255, 255, 0.12);
+  transition: background 0.4s ease;
+}
+
+.bar.filled {
   background: linear-gradient(90deg, #8f16e2, #d76dff);
-  box-shadow: 0 0 14px var(--accent-glow);
-  transition: width 1s cubic-bezier(0.2, 0.7, 0.2, 1);
+  box-shadow: 0 0 8px var(--accent-glow);
 }
 
 .achievement-card-grid {
