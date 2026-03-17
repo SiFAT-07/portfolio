@@ -293,6 +293,10 @@ main {
   margin-bottom: 1rem;
 }
 
+.achievement-group-full {
+  grid-column: 1 / -1;
+}
+
 .skill-item {
   margin-bottom: 0.9rem;
 }
