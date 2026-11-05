@@ -1,489 +1,108 @@
-
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="en" data-theme="dark">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Portfolio of a Software and Hardware Engineer building future-ready systems." />
-  <title>Maknun Ahmed Sifat | Software & Hardware Engineer</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/style.css" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#07131f">
+  <meta name="description" content="Maknun Ahmed Sifat — Computer Science and Engineering student, software, embedded systems and R&D.">
+  <meta property="og:title" content="Maknun Ahmed Sifat | Software, Embedded Systems & R&D">
+  <meta property="og:description" content="Research-oriented engineer building practical software, embedded and edge intelligence systems.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="resources/profile.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Maknun Ahmed Sifat">
+  <meta name="twitter:description" content="Computer Science and Engineering student at UIU, focused on software, embedded systems and R&D.">
+  <title>Maknun Ahmed Sifat | Software, Embedded Systems & R&D</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E⚓%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/descent.css">
+  <link rel="stylesheet" href="css/background-life.css">
+  <link rel="stylesheet" href="css/video-bg.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Maknun Ahmed Sifat",
+    "email": "mailto:maknunsifat2002@gmail.com",
+    "address": {"@type": "PostalAddress", "addressLocality": "Dhaka", "addressCountry": "Bangladesh"},
+    "sameAs": ["https://www.linkedin.com/in/maknun-ahmed-sifat", "https://github.com/SiFAT-07"],
+    "jobTitle": "Computer Science and Engineering student"
+  }
+  </script>
 </head>
 <body>
-  <canvas id="particle-canvas" aria-hidden="true"></canvas>
+  <div class="scroll-progress" aria-hidden="true"></div>
   <div class="cursor-glow" aria-hidden="true"></div>
-
-  <header class="site-header" id="top">
-    <a href="#hero" class="logo">MS</a>
-    <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>
-    <nav class="site-nav" aria-label="Primary navigation">
-      <a href="#about">About</a>
-      <a href="#skills">Skills</a>
-      <a href="#achievements">Achievements</a>
-      <a href="#projects">Projects</a>
-      <a href="#timeline">Experience</a>
-      <a href="#github">GitHub</a>
-      <a href="#contact">Contact</a>
+  <div class="video-background" aria-hidden="true">
+    <video id="video-layer-a" muted loop playsinline preload="metadata"></video>
+    <video id="video-layer-b" muted loop playsinline preload="metadata"></video>
+  </div>
+  <canvas id="descent-atmosphere" aria-hidden="true"></canvas>
+  <header class="site-header">
+    <a class="wordmark" href="#hero" aria-label="Back to top">MS<span>.</span></a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav"><span></span><span></span><span></span><b>Menu</b></button>
+    <nav id="primary-nav" class="site-nav" aria-label="Primary navigation">
+      <a href="#about">Intro</a><a href="#awards">Achievements</a><a href="#experience">Roles</a><a href="#projects">Projects</a><a href="#research">Papers</a><a href="#contact">Contact</a>
     </nav>
+    <button class="theme-toggle" type="button" aria-label="Switch to light theme" title="Toggle theme">☼</button>
   </header>
+  <aside class="depth-hud" aria-label="Ocean depth">
+    <div class="depth-hud__bar" id="depth-scale" role="progressbar" aria-valuemin="0" aria-valuemax="11000" aria-valuenow="0" aria-valuetext="0 meters, Surface">
+      <span id="depth-fill"></span>
+    </div>
+    <div class="depth-hud__content" aria-live="polite">
+      <span class="depth-hud__zone" id="depth-zone-name">Surface</span>
+      <strong id="depth-value">0 m</strong>
+      <span id="pressure-value">1.0 atm</span>
+      <span id="temperature-value">26.0 °C</span>
+      <span id="light-value">100% light</span>
+    </div>
+  </aside>
 
   <main>
     <section id="hero" class="hero section reveal">
-      <div class="hero-content">
-        <p class="eyebrow">Future Systems Architect</p>
-        <h1>Maknun Ahmed Sifat</h1>
-        <h2>AI Systems Enthusiast | ML, Networking, and Embedded Intelligence</h2>
-        <p class="tagline">
-          I’m an undergraduate engineer interested in building intelligent systems that combine software and hardware. My interests include machine learning, networking, and embedded or edge AI systems.Currently, I work as an Undergraduate Teaching Assistant, where I support students in core computing courses while continuing to explore research-driven projects.I’m particularly interested in developing practical AI systems and scalable infrastructure that connect intelligent algorithms with real-world devices and networks.
-        </p>
-        <div class="hero-actions">
-          <a href="#projects" class="btn btn-primary">View Projects</a>
-          <a href="#contact" class="btn btn-secondary">Contact Me</a>
-          <a href="assets/Alex-Quantum-CV.pdf" class="btn btn-ghost" download>Download CV</a>
-        </div>
+      <div class="hero-copy">
+        <p class="eyebrow">Software · Embedded Systems · R&amp;D</p>
+        <h1>Maknun Ahmed <em>Sifat</em></h1>
+        <p class="hero-title">Undergraduate Computer Science &amp; Engineering student <span>· Software, Embedded Systems &amp; R&amp;D</span></p>
+        <p class="hero-lede">Research-oriented engineer working across software security, API security and edge/IoT intelligence — with a focus on rigorous analysis, practical engineering, and collaboration.</p>
+        <div class="hero-actions"><a class="button button-primary magnetic" href="#projects">View projects <span>↗</span></a><a class="button button-quiet magnetic" href="#contact">Contact</a><a class="button button-quiet" href="cv.pdf" download>Download CV</a></div>
+        <div class="social-row" aria-label="Social links"><a href="mailto:maknunsifat2002@gmail.com">Email ↗</a><a href="https://www.linkedin.com/in/maknun-ahmed-sifat" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a><a href="https://github.com/SiFAT-07" target="_blank" rel="noopener noreferrer">GitHub ↗</a></div>
+        <div class="profile-chip"><img src="resources/profile.jpg" alt="Maknun Ahmed Sifat" width="48" height="48"><span class="initials" aria-hidden="true">MS</span><span>Dhaka, Bangladesh</span></div>
       </div>
-      <div class="hero-visual glass-panel">
-        <img src="resources/profile.jpg" alt="Profile placeholder" />
-        <div class="status-chip">Open to Research & Engineering Roles</div>
+      <div class="hero-scene-wrap glass-panel">
+        <img class="hero-profile-image" src="resources/profile.jpg" alt="Maknun Ahmed Sifat" width="640" height="640">
+        <div class="scene-caption"><span class="live-dot"></span> Software · Embedded Systems · R&amp;D</div>
       </div>
     </section>
 
     <section id="about" class="section reveal">
-      <div class="section-heading">
-        <p class="eyebrow">About Me</p>
-        <h3>Engineering Beyond Boundaries</h3>
-      </div>
-      <div class="about-grid">
-        <p>
-          I build systems that bridge software intelligence and hardware reliability.
-          My work spans scalable backend architecture, machine learning integration,
-          embedded firmware, and IoT ecosystems optimized for real-world performance.
-        </p>
-        <p>
-          From designing AI-assisted control logic to debugging electronics at signal level,
-          I focus on innovation, systems thinking, and measurable impact across the full stack
-          of modern technology.
-        </p>
-      </div>
+      <div class="section-heading"><p class="eyebrow">01 / About</p><h2>Curious by nature.<br><em>Rigorous by practice.</em></h2></div>
+      <div class="about-grid"><p class="lead-copy">Undergraduate Computer Science and Engineering student at United International University.</p><div class="about-copy"><p>My work spans software security, API security and edge/IoT intelligence. I am currently developing a final year project on malicious-package detection, with one paper submitted to a conference and another in development.</p><p>As R&amp;D Team Lead of UIU Mariner — Global Finalist at the MATE ROV World Championship 2026 — and a full-time Undergraduate Teaching Assistant, I enjoy turning analysis into concrete engineering decisions.</p></div></div>
     </section>
 
-   <section id="skills" class="section reveal">
-  <div class="section-heading">
-    <p class="eyebrow">Skills</p>
-    <h3>Technical Skills</h3>
-  </div>
+    <section id="awards" class="section reveal"><div class="section-heading"><p class="eyebrow">02 / Achievements</p><h2>Proof points,<br><em>earned together.</em></h2></div><div id="awards-list" class="awards-list"></div></section>
 
-  <div class="skills-layout">
+    <section id="experience" class="section reveal"><div class="section-heading"><p class="eyebrow">03 / Current roles</p><h2>What I&apos;m doing<br><em>now.</em></h2></div><div id="experience-list" class="experience-list"></div></section>
 
-    <article class="glass-panel skill-group">
-      <h4>Software</h4>
+    <section id="projects" class="section reveal"><div class="section-heading section-heading-row"><div><p class="eyebrow">04 / Selected work</p><h2>Built to be<br><em>useful.</em></h2></div><div class="filter-row" role="group" aria-label="Filter projects"><button class="filter active" data-filter="all">All</button><button class="filter" data-filter="software">Software</button><button class="filter" data-filter="research">Research</button><button class="filter" data-filter="robotics">Robotics/Embedded</button></div></div><div id="project-grid" class="project-grid"></div></section>
 
-      <div class="skill-item">
-        <div class="skill-meta">
-          <span>Python</span>
-          <span class="skill-level">Advanced</span>
-        </div>
-        <div class="skill-level-bars">
-          <span class="bar filled"></span><span class="bar filled"></span><span class="bar filled"></span><span class="bar filled"></span><span class="bar filled"></span>
-        </div>
-      </div>
+    <section id="research" class="section reveal"><div class="section-heading"><p class="eyebrow">05 / Papers &amp; research</p><h2>Questions worth<br><em>building for.</em></h2></div><div id="research-grid" class="research-grid"></div></section>
 
-      <div class="skill-item">
-        <div class="skill-meta">
-          <span>C / C++</span>
-          <span class="skill-level">Intermediate</span>
-        </div>
-        <div class="skill-level-bars">
-          <span class="bar filled"></span><span class="bar filled"></span><span class="bar filled"></span><span class="bar"></span><span class="bar"></span>
-        </div>
-      </div>
+    <section id="education" class="section section-tight reveal"><div class="section-heading"><p class="eyebrow">06 / Education</p><h2>Learning with intent.</h2></div><div class="timeline"><article class="timeline-item"><span class="mono">2022 — Present</span><div><h3>BSc in Computer Science and Engineering (CSE)</h3><p class="muted">United International University (UIU) · Dhaka, Bangladesh</p><p>Consecutive <b>100% and 50% Academic Merit Scholarship</b> winner across multiple trimesters.</p></div></article><article class="timeline-item"><span class="mono">2019 — 2021</span><div><h3>Higher Secondary Certificate (HSC)</h3><p class="muted">Banani Bidyaniketan School and College · Dhaka, Bangladesh</p></div></article></div></section>
 
-      <div class="skill-item">
-        <div class="skill-meta">
-          <span>Machine Learning</span>
-          <span class="skill-level">Intermediate</span>
-        </div>
-        <div class="skill-level-bars">
-          <span class="bar filled"></span><span class="bar filled"></span><span class="bar filled"></span><span class="bar"></span><span class="bar"></span>
-        </div>
-      </div>
+    <section id="skills" class="section reveal"><div class="section-heading"><p class="eyebrow">07 / Other: technical skills</p><h2>A toolkit for<br><em>the edge.</em></h2></div><div class="skills-layout"><div class="constellation-wrap glass-panel"><canvas id="skills-scene" aria-label="Interactive 3D skill constellation"></canvas><div class="constellation-fallback">Hover or select a skill below</div></div><div class="skill-list" id="skill-list"></div></div></section>
 
-      <div class="skill-item">
-        <div class="skill-meta">
-          <span>Web Development</span>
-          <span class="skill-level">Advanced</span>
-        </div>
-        <div class="skill-level-bars">
-          <span class="bar filled"></span><span class="bar filled"></span><span class="bar filled"></span><span class="bar filled"></span><span class="bar filled"></span>
-        </div>
-      </div>
-
-    </article>
-
-
-    <article class="glass-panel skill-group">
-      <h4>Hardware</h4>
-
-      <div class="skill-item">
-        <div class="skill-meta">
-          <span>Embedded Systems</span>
-          <span class="skill-level">Advanced</span>
-        </div>
-        <div class="skill-level-bars">
-          <span class="bar filled"></span><span class="bar filled"></span><span class="bar filled"></span><span class="bar filled"></span><span class="bar filled"></span>
-        </div>
-      </div>
-
-      <div class="skill-item">
-        <div class="skill-meta">
-          <span>Microcontrollers</span>
-          <span class="skill-level">Advanced</span>
-        </div>
-        <div class="skill-level-bars">
-          <span class="bar filled"></span><span class="bar filled"></span><span class="bar filled"></span><span class="bar filled"></span><span class="bar filled"></span>
-        </div>
-      </div>
-
-      <div class="skill-item">
-        <div class="skill-meta">
-          <span>IoT Development</span>
-          <span class="skill-level">Intermediate</span>
-        </div>
-        <div class="skill-level-bars">
-          <span class="bar filled"></span><span class="bar filled"></span><span class="bar filled"></span><span class="bar"></span><span class="bar"></span>
-        </div>
-      </div>
-
-      <div class="skill-item">
-        <div class="skill-meta">
-          <span>Electronics Debugging</span>
-          <span class="skill-level">Advanced</span>
-        </div>
-        <div class="skill-level-bars">
-          <span class="bar filled"></span><span class="bar filled"></span><span class="bar filled"></span><span class="bar filled"></span><span class="bar filled"></span>
-        </div>
-      </div>
-
-    </article>
-
-  </div>
-</section>
-
-    <section id="achievements" class="section reveal">
-      <div class="section-heading">
-        <p class="eyebrow">Achievements</p>
-        <h3>Software and Hardware Impact</h3>
-      </div>
-      <div class="achievement-columns">
-        <article class="glass-panel achievement-group">
-          <h4>Software Achievements</h4>
-          <div class="achievement-card-grid">
-            <article class="achievement-card">
-              <img src="resources/advyon.jpg" alt="Distributed analytics achievement" />
-              <div class="achievement-body">
-                <h5>Advyon - Champion</h5>
-                <p>Among 100+ teams Advyon Secured The First place</p>
-              </div>
-            </article>
-            <article class="achievement-card">
-              <img src="resources/resq.jpg" alt="AI quality pipeline achievement" />
-              <div class="achievement-body">
-                <h5>ResQ - Champion</h5>
-                <p>Among 126 Teams ResQ Secured First place </p>
-              </div>
-            </article>
-            <article class="achievement-card">
-              <img src="resources/dbms.jpg" alt="Engineering excellence award achievement" />
-              <div class="achievement-body">
-                <h5>Fire safety map - 1st Runners-Up</h5>
-                <p>Out of 128 incredible teams, achieved the 1st Runners-Up</p>
-              </div>
-            </article>
-          </div>
-        </article>
-        <article class="glass-panel achievement-group">
-          <h4>Hardware Achievements</h4>
-          <div class="achievement-card-grid">
-            <article class="achievement-card">
-              <img src="resources/micro.jpg" alt="Low-power IoT node achievement" />
-              <div class="achievement-body">
-                <h5>REQ-U - 2nd Runners-Up</h5>
-                <p>Yo Yo</p>
-              </div>
-            </article>
-            <article class="achievement-card">
-              <img src="resources/Electronics.jpg" alt="Embedded robotics firmware achievement" />
-              <div class="achievement-body">
-                <h5>Assistive Gloves For Blind and Mute - 2nd Runners-Up</h5>
-                <p>Developed real-time embedded control firmware for robotics prototypes.</p>
-              </div>
-            </article>
-            <article class="achievement-card">
-              <img src="resources/soccer.jpeg" alt="Hardware diagnostics optimization achievement" />
-              <div class="achievement-body">
-                <h5>1st Runners-Up - UIU CSE FEST 2025 [Robo Soccer]</h5>
-                <p>Knocking out 54 Teams it Secured 1st Runners-Up</p>
-              </div>
-            </article>
-          </div>
-        </article>
-        <article class="glass-panel achievement-group achievement-group-full">
-          <h4>Other Achievements</h4>
-          <div class="achievement-card-grid">
-            <article class="achievement-card">
-              <img src="resources/poster.jpg" alt="Poster presentation award at UIU Research and Innovation Week 2025" />
-              <div class="achievement-body">
-                <h5>UIU Research and Innovation Week 2025</h5>
-                <p>Earned 2nd Runners-Up Award in the Poster Presentation Competition under the School of Science &amp; Engineering category.</p>
-              </div>
-            </article>
-          </div>
-        </article>
-        <article class="glass-panel achievement-group achievement-group-full">
-          <div class="achievement-card-grid">
-            <article class="achievement-card">
-              <img src="resources/rush.jpg" alt="Poster presentation award at UIU Research and Innovation Week 2025" />
-              <div class="achievement-body">
-                <h5>Rush Hour Intra University Robotics Competition</h5>
-                <p>Secured 1st Runners-Up</p>
-              </div>
-            </article>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <section id="projects" class="section reveal">
-      <div class="section-heading">
-        <p class="eyebrow">Projects</p>
-        <h3>Flagship Work</h3>
-      </div>
-
-      <div class="project-filters" role="group" aria-label="Project filters">
-        <button class="filter-btn active" data-filter="all">All</button>
-        <button class="filter-btn" data-filter="software">Software</button>
-        <button class="filter-btn" data-filter="hardware">Hardware</button>
-        <button class="filter-btn" data-filter="hybrid">Hybrid</button>
-      </div>
-
-      <div class="project-grid">
-        <article class="glass-panel project-card" data-category="software">
-          <img src="resources/advyon.jpg" alt="Aurora Cloud project preview" />
-          <div class="project-content">
-            <h4>ADVYON – AI-Powered Legal Workspace (Champion : UIU CSE Project Showcase)</h4>
-            <p>ADVYON – AI-Powered Legal Workspace
-“From documents to decisions – faster, safer, smarter.”
-ADVYON is designed to redefine how modern legal professionals work. It is an end-to-end AI-integrated legal ecosystem built for:
-✔ Law firms
-✔ Solo lawyers
-✔ In-house legal teams
-✔ Legal operations departments
-⚖️Try ADVYON: advyon.vercel.app
-⭐Core System Highlights⭐
-🤖 AI Legal Co-Pilot
-1. Chat with an AI trained on your own cases, documents, threads, and legal database
-2. Multi-document analysis: summarize, compare & extract key insights instantly
-3. Smart suggestions: next steps, legal references, risk flags & checklists
-4. Context-aware AI Assistant Sidebar
-📂 Smart Case & Document Workspace
-1. Centralized case workspace (files, notes, messages in one view)
-2. Secure uploads with live processing status (Pending → Processing → Done)
-3. AI-generated summaries, categories & key insights
-4. Unified “My Documents” with filters & AI statistics
-5. Quick search across cases, documents & summaries legal document
-📅 Scheduling & Deadlines Intelligence
-1. Legal calendar with automatic conflict detection
-2. Dashboard view of today’s hearings, tasks & deadlines
-3. AI-highlighted urgent matters & critical upcoming dates
-💬 Client Collaboration & Legal Community
-1. Secure 1-to-1 lawyer–client messaging system
-2. Case threads (star, archive, mark as read)
-3. Access-controlled case sharing
-4. Community Q&A hub with AI-poweredquestion's answer suggestions based on sentiment analysis.
-5. Smart tagging & legal reference suggestions
-6. AI-generated community thread summaries
-📊 Business & Analytics Dashboard
-1. Live case, client & revenue metrics
-2. Workload & deadline insights
-3. Team performance analytics
-4. Admin & operations KPIs
-🔐 Trust, Security & Compliance
-1. Bank-grade security with hardened APIs & rate limiting
-2. Secure file handling architecture
-3. Role-based access (Client / Lawyer / Admin / Super Admin)
-4. Full audit trails (activities, logs, notifications per case)
-5. Privacy-first system with clear Terms, Privacy, Cookie & Security policies
-6. Stripe-powered subscription & payment integration
-🏆 Why ADVYON Wins
-ADVYON combines:
-✔ Case management
-✔ AI intelligence
-✔ Analytics
-✔ Secure collaboration
-✔ Legal community ecosystem
-All inside a single unified platform. It is built specifically for real legal workflows.</p>
-            <p class="tech">Go, Node.js, Docker, Kubernetes</p>
-            <div class="project-links">
-              <a href="https://github.com/SiFAT-07" target="_blank" rel="noopener noreferrer">GitHub</a>
-              <a href="#" aria-disabled="true">Live Demo</a>
-            </div>
-          </div>
-        </article>
-
-        <article class="glass-panel project-card" data-category="hybrid">
-          <img src="resources/micro.jpg" alt="Neuron Board project preview" />
-          <div class="project-content">
-            <h4>REQ-U - (2nd Runners Up : UIU CSE Project Showcase)</h4>
-            <p>"REQ-U" is designed to assist in post-earthquake rescue operations especially in densely populated cities like Dhaka, where it’s often too dangerous or impossible for humans to reach victims trapped under debris.
-⭐Key Features:
-📍1. Flipper Mechanism:
-Custom-built front flippers enable REQ-U to move through rocks, debris, uneven terrain, and slopes, ensuring stability and adaptability in harsh environments.
-📍2. 4-DOF Robotic Arm:
-The rover is equipped with a four-degree-of-freedom robotic arm that allows flexible and precise movements that are essential for handling delicate rescue operations in tight or dangerous spaces.
-📍3. Syringe Mechanism:
-Attached to the arm is a manual syringe system, developed with a custom gear mechanism to push and retract the syringe accurately. It allows medical teams to administer anaesthesia or emergency medication remotely, ensuring safety and precision. This feature is fully human-controlled, emphasizing our focus on ethical, life-saving applications.
-📍4. Real-Time Monitoring & Sensors:
-REQ-U is fitted with a live camera feed and multiple sensors for toxic gas detection, environmental data, and area safety analysis then all sent back to the base station for real-time decision-making.
-📍5. Web Based Dashboard:
-Our web interface displays live video, sensor readings, and the rover’s trajectory and location, allowing operators to monitor and control REQ-U remotely with ease and accuracy.
-⭐ This is just the first prototype of REQ-U, and our vision goes far beyond this stage.</p>
-            <p class="tech">C/C++, STM32, FreeRTOS, PCB Design</p>
-            <div class="project-links">
-              <a href="https://github.com/SiFAT-07" target="_blank" rel="noopener noreferrer">GitHub</a>
-              <a href="#" aria-disabled="true">Live Demo</a>
-            </div>
-          </div>
-        </article>
-
-        <article class="glass-panel project-card" data-category="software">
-          <img src="resources/resq.jpg" alt="Nexus Grid project preview" />
-          <div class="project-content">
-            <h4>ResQ - Emergency Response App (Champion : UIU CSE Project Showcase)</h4>
-            <p>End-to-end IoT intelligence stack combining firmware telemetry and predictive analytics.</p>
-            <p class="tech">Python, TensorFlow Lite, MQTT, ESP32</p>
-            <div class="project-links">
-              <a href="https://github.com/SiFAT-07" target="_blank" rel="noopener noreferrer">GitHub</a>
-              <a href="#" aria-disabled="true">Live Demo</a>
-            </div>
-          </div>
-        </article>
-        <article class="glass-panel project-card" data-category="hybrid">
-          <img src="assets/images/project-nexus.svg" alt="Nexus Grid project preview" />
-          <div class="project-content">
-            <h4>Nexus Grid</h4>
-            <p>End-to-end IoT intelligence stack combining firmware telemetry and predictive analytics.</p>
-            <p class="tech">Python, TensorFlow Lite, MQTT, ESP32</p>
-            <div class="project-links">
-              <a href="https://github.com/SiFAT-07" target="_blank" rel="noopener noreferrer">GitHub</a>
-              <a href="#" aria-disabled="true">Live Demo</a>
-            </div>
-          </div>
-        </article>
-        <article class="glass-panel project-card" data-category="hybrid">
-          <img src="assets/images/project-nexus.svg" alt="Nexus Grid project preview" />
-          <div class="project-content">
-            <h4>Nexus Grid</h4>
-            <p>End-to-end IoT intelligence stack combining firmware telemetry and predictive analytics.</p>
-            <p class="tech">Python, TensorFlow Lite, MQTT, ESP32</p>
-            <div class="project-links">
-              <a href="https://github.com/SiFAT-07" target="_blank" rel="noopener noreferrer">GitHub</a>
-              <a href="#" aria-disabled="true">Live Demo</a>
-            </div>
-          </div>
-        </article>
-        <article class="glass-panel project-card" data-category="hybrid">
-          <img src="assets/images/project-nexus.svg" alt="Nexus Grid project preview" />
-          <div class="project-content">
-            <h4>Nexus Grid</h4>
-            <p>End-to-end IoT intelligence stack combining firmware telemetry and predictive analytics.</p>
-            <p class="tech">Python, TensorFlow Lite, MQTT, ESP32</p>
-            <div class="project-links">
-              <a href="https://github.com/SiFAT-07" target="_blank" rel="noopener noreferrer">GitHub</a>
-              <a href="#" aria-disabled="true">Live Demo</a>
-            </div>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <section id="timeline" class="section reveal">
-      <div class="section-heading">
-        <p class="eyebrow">Experience & Education</p>
-        <h3>Journey Timeline</h3>
-      </div>
-      <div class="timeline">
-        <article class="timeline-item glass-panel">
-          <span class="timeline-year">2024 - Present</span>
-          <h4>Senior Systems Engineer</h4>
-          <p>Leading cross-functional software-hardware integration for intelligent devices.</p>
-        </article>
-        <article class="timeline-item glass-panel">
-          <span class="timeline-year">2022 - 2024</span>
-          <h4>Embedded AI Research Engineer</h4>
-          <p>Developed optimized inference pipelines for edge devices in research prototypes.</p>
-        </article>
-        <article class="timeline-item glass-panel">
-          <span class="timeline-year">2018 - 2022</span>
-          <h4>B.Sc. in Electrical and Computer Engineering</h4>
-          <p>Focused on embedded design, machine intelligence, and robust systems architecture.</p>
-        </article>
-      </div>
-    </section>
-
-    <section id="github" class="section reveal">
-      <div class="section-heading">
-        <p class="eyebrow">GitHub</p>
-        <h3>Open Source Presence</h3>
-      </div>
-      <div class="glass-panel github-box">
-        <p>Explore repositories, code contributions, and ongoing engineering experiments.</p>
-        <a href="https://github.com/SiFAT-07" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Visit GitHub Profile</a>
-      </div>
-    </section>
-
-    <section id="contact" class="section reveal">
-      <div class="section-heading">
-        <p class="eyebrow">Contact</p>
-        <h3>Let&apos;s Build The Future</h3>
-      </div>
-      <div class="contact-layout">
-        <div class="glass-panel contact-info">
-          <p><strong>Email:</strong> alex.quantum@engineering.dev</p>
-          <p><strong>LinkedIn:</strong> linkedin.com/in/alex-quantum</p>
-          <p><strong>GitHub:</strong> github.com/SiFAT-07</p>
-        </div>
-        <form class="glass-panel contact-form" id="contact-form">
-          <label for="name">Name</label>
-          <input id="name" name="name" type="text" required />
-
-          <label for="email">Email</label>
-          <input id="email" name="email" type="email" required />
-
-          <label for="message">Message</label>
-          <textarea id="message" name="message" rows="5" required></textarea>
-
-          <button type="submit" class="btn btn-secondary">Send Message</button>
-          <p class="form-status" aria-live="polite"></p>
-        </form>
-      </div>
-    </section>
+    <section id="contact" class="section contact-section reveal"><div class="contact-card glass-panel"><p class="eyebrow">08 / Contact</p><h2>Let&apos;s make something<br><em>meaningful.</em></h2><p>For research, engineering, or collaboration conversations, reach out directly.</p><div class="contact-actions"><a class="button button-primary" href="mailto:maknunsifat2002@gmail.com">maknunsifat2002@gmail.com ↗</a><button class="button button-quiet" id="copy-email" type="button">Copy email</button></div><div class="social-row"><a href="https://www.linkedin.com/in/maknun-ahmed-sifat" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a><a href="https://github.com/SiFAT-07" target="_blank" rel="noopener noreferrer">GitHub ↗</a></div><p id="copy-status" class="copy-status" aria-live="polite"></p></div></section>
   </main>
-
-  <footer class="site-footer">
-    <p>&copy; <span id="year"></span> Alex Quantum. Crafted for next-generation engineering.</p>
-    <div class="footer-links">
-      <a href="https://github.com/SiFAT-07" target="_blank" rel="noopener noreferrer">GitHub</a>
-      <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-      <a href="#top">Back to top</a>
-    </div>
-  </footer>
-
-  <script src="js/script.js"></script>
+  <footer class="site-footer"><span>© <b id="year"></b> Maknun Ahmed Sifat</span><span>Built with HTML, CSS and Three.js</span><a href="#hero">Back to top ↑</a></footer>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.min.js"></script>
+  <script src="js/script.js" defer></script>
+  <script src="js/descent.js" defer></script>
+  <script src="js/background-life.js" defer></script>
+  <script src="js/video-bg.js" defer></script>
 </body>
 </html>
