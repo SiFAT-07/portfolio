@@ -1,0 +1,8 @@
+#descent-atmosphere {
+  opacity: 1;
+  mix-blend-mode: screen;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #descent-atmosphere { opacity: .35; }
+}
