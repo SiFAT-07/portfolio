@@ -18,6 +18,28 @@ From this folder, run `python -m http.server 8000`, then open `http://localhost:
 
 Replace `resources/profile.jpg` with the photo you want to use. Add the downloadable CV as `cv.pdf` at the repository root. The existing project images are used only as visual assets; all project names, awards, descriptions, dates, and links come from the latest CV.
 
+## Switch between profile versions
+
+The repository keeps versioned profiles in `profiles/v1/` and `profiles/v2/`. The repository root remains the active deployed portfolio.
+
+```powershell
+.\scripts\switch-portfolio.ps1 -Variant v1
+.\scripts\switch-portfolio.ps1 -Variant v2
+.\scripts\switch-portfolio.ps1 -Variant status
+```
+
+If PowerShell script execution is blocked, use the Windows launcher instead:
+
+```text
+scripts\switch-portfolio.bat v1
+scripts\switch-portfolio.bat v2
+scripts\switch-portfolio.bat
+```
+
+Before activating v2, the script saves the current root portfolio in `profiles/v1/`. Activating v1 restores that snapshot. Profile v2 is separate from the root `index.html`, so it does not affect the deployed website until it is activated and pushed.
+
+Both profiles share the repository root `resources/` and `assets/` folders. Profile folders contain only `index.html`, profile-specific CSS/JS, and documentation.
+
 ## Deploy on GitHub Pages
 
 1. Create a GitHub repository and upload this folder, including `index.html`, `css`, `js`, `resources`, and `cv.pdf`.

@@ -1,0 +1,26 @@
+<svg width="640" height="420" viewBox="0 0 640 420" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="640" y2="420" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#07131F"/>
+      <stop offset="1" stop-color="#123957"/>
+    </linearGradient>
+    <linearGradient id="blue" x1="170" y1="90" x2="470" y2="330" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#78DAF7"/>
+      <stop offset="1" stop-color="#1875D1"/>
+    </linearGradient>
+  </defs>
+  <rect width="640" height="420" rx="24" fill="url(#bg)"/>
+  <g stroke="url(#blue)" stroke-width="10" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="320" cy="210" r="92"/>
+    <circle cx="320" cy="210" r="42"/>
+    <path d="M320 118V72M320 348V302M228 210H182M458 210H412"/>
+    <path d="M255 145L222 112M385 308L418 341M385 112L418 79M255 308L222 341"/>
+  </g>
+  <g fill="#78DAF7">
+    <circle cx="320" cy="72" r="7"/>
+    <circle cx="320" cy="348" r="7"/>
+    <circle cx="182" cy="210" r="7"/>
+    <circle cx="458" cy="210" r="7"/>
+  </g>
+  <text x="320" y="392" text-anchor="middle" fill="#B4DAEF" font-family="Arial, sans-serif" font-size="18" letter-spacing="5">RESEARCH</text>
+</svg>
